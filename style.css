@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css?family=Jaldi');
+@import url('https://fonts.googleapis.com/css?family=Alfa Slab One');
+
+.center {
+    text-align: center;
+}
+
+.bdr {
+    border: 1px solid white;
+}
+
+* {
+    left: 0;
+}
+
+body {
+    max-width: max-content;
+    max-height: max-content;
+    background-color: #121212;
+    font-family: Jaldi;
+}
+
+p {
+    color: #FFFFFF;
+    opacity: 87%;
+    font-size: 16px;
+    font-family: Jaldi;
+}
+
+h3 { 
+    color: #FFFFFF;
+    opacity: 87%;
+    font-size: 20px;
+}
+
+.container {
+    border: 1px solid white;
+    width: auto;
+}
+
+.header {
+    position: fixed;
+    z-index: 1;
+    background-color: #121212;
+    width: 100%;
+    top: 0;
+    height: 68px;
+    border-bottom: 1px solid #3D444D;
+}
+
+.header-logo {
+    float: left;
+    padding-left: 260px;
+    padding-top: 6px;
+}
+
+.header-logo img {
+    width: 50px;
+    padding: 10px 0;
+}
+
+.logo-text {
+    font-family: Jaldi;
+    font-size: 28px;
+    text-decoration: none;
+    color: #FFFFFF;
+    opacity: 87%;
+    
+}
+
+.header-menu a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 20px;
+    opacity: 87%;
+}
+
+.header-menu {
+    float: right;
+    margin-right: 260px;
+}
+
+.header-menu li {
+    float: left;
+    list-style: none;
+    padding: 0px 24px;
+}
+
+.btn {
+    color: #1B2128;
+} 
+
+.box {
+    padding: 50px 260px 0 260px;
+    height: fit-content;
+}
+
+.beranda {
+    padding: 100px 260px 0 260px;
+    height: 270.3px;
+}
+
+.beranda-img {
+    width: fit-content;
+    float: left;
+}
+
+.beranda-img img {
+    width: 240px;
+    border-radius: 16px;
+}
+
+.beranda-info {
+    margin-left: 300px;
+    height: 270.3px;
+    padding: 16px 0;
+}
+
+.beranda-info-btn {
+    display: block;
+    align-items: center;
+    display: block;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.beranda-info a {
+    color: white;
+    opacity: 87%;
+    background-color: #1B2128;
+    padding: 6px 28px;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+.box-title {
+    text-align: center;
+}
+
+.box-title h3 {
+    border-bottom: 2px solid #1B2128;
+    opacity: 87%;
+}
+
+.skill-list {
+    margin: 0 24px;
+}
+
+.skill img {
+    width: 50px;
+    margin-right: 16px;
+}
+
+.inline {
+    display: inline-flex;
+    margin-bottom: 24px;
+}
+
+.box-testimoni {
+    width: fit-content;
+    margin: 0px 16px;
+    background-color: #1B2128;
+    border-radius: 8px;
+    padding: 0px 16px;
+}
+
+.name {
+    float: right;
+}
+
+.port {
+    padding-bottom: 36px;
+}
+
+#portfolio img {
+    width: 400px;
+    border-radius: 8px;
+    margin-right: 16px;
+}
+
+#portfolio a {
+    color: white;
+    opacity: 87%;
+    background-color: #1B2128;
+    padding: 6px 28px;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+#portfolio h4 {
+    color: white;
+    opacity: 87%;
+    text-align: center;
+    margin: 0%;
+    padding-bottom: 8px;
+}
+
+.portfolio-text {
+    margin-left: 16px;
+    top: 0; 
+}
+
+.portfolio-text p {
+    margin: 0%;
+}
+
+.port-link {
+    margin: 0%;
+    padding-top: 28px;
+}
+
+#kontak img {
+    width: 28px;
+    height: px;
+    margin: 16px;
+}
+
+.kontak {
+    background-color: #1B2128;
+    border-radius: 8px;
+}
+
+.kontak-list {
+    margin: 0px 72px;
+}
