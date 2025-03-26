@@ -5,7 +5,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="icon" href="assets/icon.png">
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="styles/styles.css">
         <link href='https://fonts.googleapis.com/css?family=Jaldi' rel='stylesheet'>
         <link href='https://fonts.googleapis.com/css?family=Alfa Slab One' rel='stylesheet'>
     </head>
@@ -23,6 +23,26 @@
                     <li><a href="#portfolio">Portfolio</a></li>
                     <li><a href="#kontak">Kontak</a></li>
                 </ul>
+                <span class="burger-btn" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+                <!-- Mobile Nav -->
+                <div id="myNav" class="overlay">
+                    <ul class="mobile-nav">
+                        <li><a href="javascript:void(0)" class="closebtn" onclick="closeNav()">X</a></li>
+                        <li><a href="#beranda" onclick="closeNav()">Beranda</a></li>
+                        <li><a href="#tentang" onclick="closeNav()">Tentang</a></li>
+                        <li><a href="#portfolio" onclick="closeNav()">Portfolio</a></li>
+                        <li><a href="#kontak" onclick="closeNav()">Kontak</a></li>
+                    </ul>
+                </div>
+                <script>
+                    function openNav() {
+                      document.getElementById("myNav").style.width = "100%";
+                    }
+                    
+                    function closeNav() {
+                      document.getElementById("myNav").style.width = "0%";
+                    }
+                </script>
             </div>
         </div>
         <!-- Content -->
