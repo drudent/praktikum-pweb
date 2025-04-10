@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="styles/styles.css">
         <link href='https://fonts.googleapis.com/css?family=Jaldi' rel='stylesheet'>
         <link href='https://fonts.googleapis.com/css?family=Alfa Slab One' rel='stylesheet'>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     </head>
     <body>
         <!-- Navbar -->
@@ -24,6 +25,7 @@
                     <li><a href="#kontak">Kontak</a></li>
                 </ul>
                 <span class="burger-btn" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+                
                 <!-- Mobile Nav -->
                 <div id="myNav" class="overlay">
                     <ul class="mobile-nav">
@@ -34,19 +36,12 @@
                         <li><a href="#kontak" onclick="closeNav()">Kontak</a></li>
                     </ul>
                 </div>
-                <script>
-                    function openNav() {
-                      document.getElementById("myNav").style.width = "100%";
-                    }
-                    
-                    function closeNav() {
-                      document.getElementById("myNav").style.width = "0%";
-                    }
-                </script>
             </div>
         </div>
+        
         <!-- Content -->
         <div>
+            
             <!-- Beranda -->
             <div id="beranda" class="beranda">
                 <div class="beranda-img">
@@ -61,6 +56,7 @@
                     </div>
                 </div>
             </div>
+            
             <!-- Tentang -->
             <div id="tentang" class="box">
                 <div class="box-title">
@@ -71,6 +67,7 @@
                     <p>Saya mempunyai minat untuk berkarir sebagai IT profesional.</p>
                 </div>
             </div>
+            
             <!-- Keahlian -->
             <div class="box">
                 <div class="box-title">
@@ -97,6 +94,7 @@
                     <p>Memperkerjakan saya akan membawa keahlian dan pengalaman yang relevan untuk mendukung tujuan tim dan perusahaan. Saya memiliki kemampuan untuk bekerja secara efektif dalam tim dan cepat beradaptasi dengan perubahan, sehingga dapat memberikan kontribusi positif.</p>
                 </div>
             </div>
+            
             <!-- Testimoni -->
             <div class="box">
                 <div class="box-title">
@@ -120,6 +118,7 @@
                     </div>
                 </div>
             </div>
+            
             <!-- Portfolio -->
             <div id="portfolio" class="box">
                 <div class="box-title">
@@ -150,6 +149,7 @@
                     </div>
                 </div>
             </div>
+            
             <!-- Kontak -->
             <div id="kontak" class="box">
                 <div class="box-title">
@@ -167,11 +167,96 @@
                         </div>
                     </div>
                 </div>
+                <div class="box-title">
+                    <h4>Hubungi Saya</h4>
+                </div>
+                <form id="contactForm">
+                    <label for="name">Nama Lengkap:</label>
+                    <input type="text" id="name" name="name" required>
+                    <span class="error" id="nameError"></span><br><br>
+                    <label for="email">Email:<label>
+                    <input type="email" id="email" name="email" required>
+                    <span class="error" id="emailError"></span><br><br>
+                    <label for="phone">Nomor Handphone:<label>
+                    <input type="text" id="phone" name="phone" required>
+                    <span class="error" id="phoneError"></span><br><br>
+                    <label for="message">Pesan:<label>
+                    <textarea id="message" name="message" required></textarea>
+                    <span class="error" id="messageError"></span><br><br>
+                    <button type="submit">Kirim</button>
+                </form>
             </div>
         </div>
         <!-- Footer -->
         <div class="box center">
             <p>© 2025 Icep Setian Fajar</p>
         </div>
+    
+        <!-- JavaScript -->
+        <script>
+            function openNav() {
+              document.getElementById("myNav").style.width = "100%";
+            }
+            
+            function closeNav() {
+              document.getElementById("myNav").style.width = "0%";
+            }
+
+            $(document).ready(function() {
+
+                $('#contactForm').on('submit', function(event) {
+
+                    event.preventDefault(); // Mencegah pengiriman formulir
+
+                    // Menghapus pesan kesalahan sebelumnya
+                    $('.error').text('');
+
+                    // Validasi
+                    let isValid = true;
+
+                    // Validasi Nama Lengkap
+                    const name = $('#name').val().trim();
+
+                    if (name === '' || name.split(' ').length > 5) {
+                        $('#nameError').text('Nama lengkap wajib diisi dan maksimal 5 kata.');
+                        isValid = false;
+                    }
+
+                    // Validasi Email
+                    const email = $('#email').val().trim();
+                    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+                    if (email === '' || !emailPattern.test(email)) {
+                        $('#emailError').text('Email wajib diisi dan harus dalam format yang valid.');
+                        isValid = false;
+                    }
+
+                    // Validasi Nomor Handphone
+                    const phone = $('#phone').val().trim();
+                    const phonePattern = /^[0-9]{10,15}$/; // Contoh: 10-15 digit
+
+                    if (phone === '' || !phonePattern.test(phone)) {
+                        $('#phoneError').text('Nomor handphone wajib diisi dan harus terdiri dari 10-15 digit.');
+                        isValid = false;
+                    }
+
+                    // Validasi Pesan
+                    const message = $('#message').val().trim();
+
+                    if (message === '' || message.split(' ').length > 50) {
+                        $('#messageError').text('Pesan wajib diisi dan maksimal 50 kata.');
+                        isValid = false;
+                    }
+
+                    // Jika semua validasi berhasil
+                    if (isValid) {
+                        alert('Pesan berhasil dikirim!');
+                        $('#contactForm')[0].reset();
+                    }
+
+                });
+
+            });
+        </script>
     </body>
 </html>
